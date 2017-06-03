@@ -11,7 +11,7 @@ $(function () {
         remoteVideosEl: '',
         // immediately ask for camera access
         autoRequestMedia: true,
-        // url: 'http://localhost:8888/socket.io/'
+         url: $("#signalingServerUrl").val()
     });
 
 // we have to wait until it's ready
