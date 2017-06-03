@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head th:replace="/fragments/header-fragment :: head"></head>
+    <body>
+        <div class="container-fluid">
+            <h1 class="text-center">Video Conference POC</h1>
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <h2 class="text-center">Me</h2>
+                    <video class="img img-rounded videoStream" id="localVideo"></video>
+                </div>
+            </div>
+            <br/><br/>
+            <div class="row">
+                <h2 class="text-center">Remotes</h2>
+                <div id="remotes"></div>
+            </div>
+        </div>
+    </body>
+</html>
