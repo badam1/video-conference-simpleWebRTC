@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <h1 class="text-center">Video Conference POC</h1>
             <div class="row">
-                <div id="urlAndForm" class="col-lg-3">
+                <div id="urlAndForm" class="col-md-3">
                     <form th:action="@{/videochat/index}" method="post">
                         <label for="roomName">Room name:</label>
                         <input autofocus="autofocus" name="roomName" type="text" id="roomName" class="form-control input-block"/>
@@ -17,7 +17,7 @@
                         <button type="submit" id="createRoomBtn" class="btn btn-success btn-sm">Enter room</button>
                     </form>
                 </div>
-                <div class="col-lg-2 col-lg-offset-2">
+                <div class="col-md-2 col-md-offset-2">
                     <h2 class="text-center">Me</h2>
                     <i id="localCamBtn" class="fa fa-video-camera camera pull-right"></i>
                     <i id="localMicBtn" class="fa fa-microphone microphone pull-right"></i>
