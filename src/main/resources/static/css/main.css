@@ -33,3 +33,7 @@ body {
     background: url("/../images/background.jpg") no-repeat fixed bottom;
     background-size: cover;
 }
+
+.microphone, .camera {
+    font-size: x-large;
+}

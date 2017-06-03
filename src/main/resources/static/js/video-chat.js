@@ -1,17 +1,17 @@
 /*
  * Created by Adam Bodansky on 2017.06.02..
  */
-
 $(function () {
 
     var room = $("#room").val();
+    var $body = $("body");
 
     if (room) {
         $("form").remove();
         $("#urlAndForm").append(
             "<h4>Access url for : " + room + "</h4> " +
             "<input readonly='readonly' class='input form-control input-block' type='text' value='" + window.location + "'/>");
-        $("body").append("<a href='/videochat/index' class='btn btn-warning right-corner'><i class='fa fa-sign-out'>Leave room</i></a>")
+        $body.append("<a href='/videochat/index' class='btn btn-warning right-corner'><i class='fa fa-sign-out'>Leave room</i></a>")
     }
 
     $("#createRoomBtn").on("click", function () {
@@ -116,4 +116,42 @@ $(function () {
     webrtc.on('remoteVolumeChange', function (peer, volume) {
         showVolume(document.getElementById('volume_' + peer.id), volume);
     });
+
+    var mic = false;
+    var cam = false;
+
+    var $localMicBtn = $("#localMicBtn");
+    var $localCamBtn = $("#localCamBtn");
+
+    $body.on("click", "#localMicBtn", function () {
+        if (mic) {
+            $localMicBtn.removeClass("fa-microphone");
+            $localMicBtn.addClass("fa-microphone-slash");
+            $localMicBtn.css("color", "red");
+            webrtc.mute();
+            mic = false;
+        } else {
+            $localMicBtn.removeClass("fa-microphone-slash");
+            $localMicBtn.addClass("fa-microphone");
+            $localMicBtn.css("color", "#333333");
+            webrtc.unmute();
+            mic = true;
+        }
+    });
+
+    $body.on("click", "#localCamBtn", function () {
+        if (cam) {
+            $localCamBtn.css("color", "red");
+            webrtc.pauseVideo();
+            cam = false;
+        } else {
+            $localCamBtn.css("color", "#333333");
+            webrtc.resumeVideo();
+            cam = true;
+        }
+    });
 });
+
+
+
+
