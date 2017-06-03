@@ -23,6 +23,12 @@
     height: 10px;
 }
 
+.right-corner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 body {
     background: url("/../images/background.jpg") no-repeat fixed bottom;
     background-size: cover;

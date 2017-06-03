@@ -11,6 +11,7 @@ $(function () {
         $("#urlAndForm").append(
             "<h4>Access url for : " + room + "</h4> " +
             "<input readonly='readonly' class='input form-control input-block' type='text' value='" + window.location + "'/>");
+        $("body").append("<a href='/videochat/index' class='btn btn-warning right-corner'><i class='fa fa-sign-out'>Leave room</i></a>")
     }
 
     $("#createRoomBtn").on("click", function () {
