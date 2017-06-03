@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/videochat")
 public class MainController {
 
-    @Value("signaling.server.url")
+    @Value("${signaling.server.url}")
     private String signalingServerUrl;
 
     private static final Logger log = LoggerFactory.getLogger(MainController.class);

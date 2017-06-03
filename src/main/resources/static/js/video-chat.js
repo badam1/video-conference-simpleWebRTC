@@ -11,8 +11,13 @@ $(function () {
         remoteVideosEl: '',
         // immediately ask for camera access
         autoRequestMedia: true,
-         url: $("#signalingServerUrl").val()
     });
+
+    var signalingUrl = $("#signalingServerUrl").val();
+
+    if(signalingUrl !== "no") {
+        webrtc.url = signalingUrl;
+    }
 
 // we have to wait until it's ready
     webrtc.on('readyToCall', function () {
