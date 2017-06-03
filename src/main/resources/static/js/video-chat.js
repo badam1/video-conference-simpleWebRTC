@@ -9,7 +9,7 @@ $(function () {
     if (room) {
         $("form").remove();
         $("#urlAndForm").append(
-            "<h4>Room access for : " + room + "</h4> " +
+            "<h4>Access url for : " + room + "</h4> " +
             "<input readonly='readonly' class='input form-control input-block' type='text' value='" + window.location + "'/>");
     }
 
