@@ -46,7 +46,7 @@ $(function () {
         var remotes = document.getElementById('remotes');
         if (remotes) {
             var container = document.createElement('div');
-            container.className = 'col-lg-3';
+            container.className = 'col-md-3';
             container.id = 'container_' + webrtc.getDomId(peer);
             container.appendChild(video);
 
